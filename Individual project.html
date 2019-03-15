@@ -1,0 +1,121 @@
+<!DOCTYPE  html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>ONLINE VOTERS PORTAL</title>
+    <!-- <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" type="text/css" media="screen" href="main.css">
+    <script src="main.js"></script> -->
+
+    <style>
+        #table, td{border: 1px solid black; padding:15px; border-radius:5px; background-color: rgb(242, 255, 254);}
+        #cover1{border: 5px solid black; background-color: rgb(187, 216, 216); height:100%;}
+        #presBox{border: 5px solid black;}
+        #submit{color:black; background-color: rgb(43, 138, 43); padding:10px; width:30%;}
+        #headCover{padding-top:5px; border-bottom: solid black; background-image: linear-gradient(to right, rgb(1, 43, 29) ,gainsboro);}
+
+        #head1{text-align: center; color:solid;}
+        #presText, #gubText, #senText{text-align: center; background-color: lightgreen; font-size:18px;}
+        #candText{font-size: 25px; color:solid;}       
+                               
+    </style>
+</head>
+
+<body>    
+    <div id="cover1" class="container">
+        <div id="headCover">
+            <p1 id="head1"><h1>ONLINE VOTING PORTAL</h1></p1>
+        </div>
+        <table style="width:100%" id="tab1">
+            <tr>
+                <th id="candText" colspan="6">CANDIDATE SELECTION</th>
+            </tr>
+                        
+            <tr>
+                <td colspan="6" id="presText">PRESIDENTIAL</td>
+            </tr>
+            <tr>
+                <td align="center"><button id="APC_P" class="APC">APC</button><img id="logo-APC" src = "Logos/APC-S.png"></td>
+                <td align="center"><button id="PDP-P" class="PDP">PDP</button><img id="logo-PDP" src = "Logos/PDP-S.jpg"></td>
+                <td align="center"><button id="SDP-P" class="SDP">SDP</button><img id="logo-SDP" src = "Logos/SDP-S.png"></td>
+                <td align="center"><button id="YPP-P" class="YPP">YPP</button><img id="logo-YPP" src = "Logos/YPP-S.png"></td>
+                <td align="center"><button id="FRESH-P" class="FRESH">FRESH</button><img id="logo-FRESH" src = "Logos/Fresh-S.jpg"></td>
+                <td align="center"><button id="ANN-P" class="ANN">ANN</button><img id="logo-ANN" src = "Logos/ANN-S.jpg"></td>
+            </tr>
+            <tr>
+                <td colspan="6" id="senText">SENATORIAL</td>
+            </tr>
+            <tr>
+                <td align="center"><button id="APC_S" class="APC">APC</button><img id="logo-APC" src = "Logos/APC-S.png"></td>
+                <td align="center"><button id="PDP-S" class="PDP">PDP</button><img id="logo-PDP" src = "Logos/PDP-S.jpg"></td>
+                <td align="center"><button id="SDP-S" class="SDP">SDP</button><img id="logo-SDP" src = "Logos/SDP-S.png"></td>
+                <td align="center"><button id="YPP-S" class="YPP">YPP</button><img id="logo-YPP" src = "Logos/YPP-S.png"></td>
+                <td align="center"><button id="FRESH-S" class="FRESH">FRESH</button><img id="logo-FRESH" src = "Logos/Fresh-S.jpg"></td>
+                <td align="center"><button id="ANN-S" class="ANN">ANN</button><img id="logo-ANN" src = "Logos/ANN-S.jpg"></td>
+            </tr>
+            <tr>
+                <td colspan="6" id="gubText">GUBERNATORIAL</td>
+            </tr>
+            <tr>
+                <td align="center"><button id="APC_G" class="APC">APC</button><img id="logo-APC" src = "Logos/APC-S.png"></td>
+                <td align="center"><button id="PDP-G" class="PDP">PDP</button><img id="logo-PDP" src = "Logos/PDP-S.jpg"></td>
+                <td align="center"><button id="SDP-G" class="SDP">SDP</button><img id="logo-SDP" src = "Logos/SDP-S.png"></td>
+                <td align="center"><button id="YPP-G" class="YPP">YPP</button><img id="logo-YPP" src = "Logos/YPP-S.png"></td>
+                <td align="center"><button id="FRESH-G" class="FRESH">FRESH</button><img id="logo-FRESH" src = "Logos/Fresh-S.jpg"></td>
+                <td align="center"><button id="ANN-G" class="ANN">ANN</button><img id="logo-ANN" src = "Logos/ANN-S.jpg"></td>
+            </tr>
+            
+            <tr>
+                    <th  colspan="6">
+                        <button id="submit">COMPLETE VOTING</button>
+                    </th>
+            </tr>
+        </table>
+    </div>
+    
+
+
+    <!-- <script>
+        alert("CONTINUE TO VOTER VERIFICATION");            
+        dataCollection();
+        do{verification()}
+        while(PVC!=PVC_saved||finger!=finger_saved);               
+
+        function dataCollection(){
+            var PVC_saved= "123HJN28FP";
+            var finger_saved= "23489";
+            var PVC = prompt("ENTER PVC NUMBER");
+            var finger = alert("PLACE YOUR FINGER ON THE READER");
+            var finger = prompt("ENTER 23489");
+            var finger = parseInt(finger);
+        }        
+
+        function verification(){  
+            var dc = new dataCollection();          
+            if (dc.PVC==dc.PVC_saved){
+                if(dc.finger==dc.finger_saved){alert("VERIFICTION COMPLETE, WELCOME +user+")}
+                else{alert("VERIFICATION UNSUCCESSFUL")}
+            }
+            else{dataCollection();}
+        }
+                        
+        console.log (finger);
+        // verification();
+
+        // var presCount = 0;
+        // var senCount = 0;
+        // var gubCount = 0;
+        document.getElementById("submit").addEventListener("click",vote());
+        function vote(){
+            alert("VERIFY THAT YOU HAVE SELECTED" +XYZ+ "FOR PRESIDENT");
+            alert("VERIFY THAT YOU HAVE SELECTED" +XYZ+ "FOR SENATOR");
+            alert("VERIFY THAT YOU SELECTED" +XYZ+ "FOR GOVERNOR")
+
+                              
+        }
+        
+    </script> -->
+    
+</body>
+</html>
